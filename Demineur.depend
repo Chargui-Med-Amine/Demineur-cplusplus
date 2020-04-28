@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1588024338 source:c:\users\moham\onedrive\bureau\moi\ensi\s2\projet prog\demineur\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	"carrau.h"
+	"champdesmines.h"
+
+1588024742 c:\users\moham\onedrive\bureau\moi\ensi\s2\projet prog\demineur\include\carrau.h
+	<stdio.h>
+	<iostream>
+
+1588026759 c:\users\moham\onedrive\bureau\moi\ensi\s2\projet prog\demineur\include\champdesmines.h
+	<iostream>
+	"carrau.h"
+	<algorithm>
+	<cstdlib>
+	<ctime>
+
+1586628698 source:c:\users\moham\onedrive\bureau\moi\ensi\s2\projet prog\demineur\src\carrau.cpp
+
+1586628705 source:c:\users\moham\onedrive\bureau\moi\ensi\s2\projet prog\demineur\src\champdesmines.cpp
+
