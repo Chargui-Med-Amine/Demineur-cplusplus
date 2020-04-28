@@ -37,8 +37,6 @@ public:
             d2 = 16;
             nb_mines = 40;
         }
-
-
         else if (niveau == "dificile") {
             d1 = 30;
             d2 = 16;
@@ -60,9 +58,6 @@ public:
                 cp++;
             }
         }
-
-
-
     }
 
     void compte_voisins()
@@ -114,7 +109,6 @@ public:
                 cout<<"  "<<l;
         }
         cout<<endl;
-        //cout<<"   0   1   2   3   4   5   6   7   8   9"<<endl;
         for(i=0;i<d1;i++)
         {
             if(i<10)
@@ -188,12 +182,7 @@ public:
     }
     void aff_lose()
     {
-
-
-
-
-
-        for(int i=0;i<d1;i++)
+     for(int i=0;i<d1;i++)
         {
             for(int j=0;j<d2;j++)
 
@@ -228,12 +217,6 @@ public:
 
         }
         while(d != "o"&&d != "d");
-
-
-
-
-
-
         if(d=="o" && (champ[h][t].get_nb_minevoisin()==0 ))
         {
             open_rec(h,t);
@@ -246,16 +229,11 @@ public:
 
 
         Affichage();
-
-
-
-
     }
 
     void open_rec(int i,int j)
     {
         champ[i][j].set_rec();
-        //if(get_champ()[i][j].get_etat()!="o")
         champ[i][j].set_etat("o");
         int deb1=std::max(0,i-1);
         int deb2=std::max(0,j-1);
@@ -266,8 +244,6 @@ public:
         {
             for(int y=deb2;y<=fin2;y++)
             {
-                //if(get_champ()[x][y].get_etat()!="o")
-                //if(champ[x][y].get_est_mine()==false)
                 champ[x][y].set_etat("o");
                 if((champ[x][y].get_nb_minevoisin()==0) && (champ[x][y].get_rec()==false) )
                 {

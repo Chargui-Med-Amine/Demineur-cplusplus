@@ -15,9 +15,6 @@ int main()
 
     champdesmines m;
     m.compte_voisins();
-
-
-
     m.Affichage();
     while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_carrau()-m.get_nb_mines()))
     {
@@ -43,8 +40,5 @@ int main()
 		<< (chrono::duration_cast<chrono::seconds>(end - start).count())/60
 		<<  ":"<< std::setw(2) << std::setfill('0')<<(chrono::duration_cast<chrono::seconds>(end - start).count())%60
 		<<" ]  ######" <<endl;
-
-
-
     return 0;
 }
