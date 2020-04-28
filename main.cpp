@@ -10,6 +10,8 @@ using namespace std;
 int main()
 {
 
+    srand((int)time(0));
+    auto start = chrono::steady_clock::now();
 
     champdesmines m;
     m.compte_voisins();
@@ -35,6 +37,12 @@ int main()
 
 
     }
+    auto end = chrono::steady_clock::now();
+
+	cout << "###### Temps ecoule : [ "<< std::setw(2) << std::setfill('0')
+		<< (chrono::duration_cast<chrono::seconds>(end - start).count())/60
+		<<  ":"<< std::setw(2) << std::setfill('0')<<(chrono::duration_cast<chrono::seconds>(end - start).count())%60
+		<<" ]  ######" <<endl;
 
 
 
