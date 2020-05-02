@@ -59,6 +59,29 @@ public:
             }
         }
     }
+     champdesmines(int x) //constructeur pour le tutoriel
+    {
+        nb_mines =x;
+        d1 = 8;
+        d2 = 8;
+        champ=new carrau*[d1];
+        for(int i=0;i<d1;i++)
+        {
+            champ[i]=new carrau[d2];
+        }
+        champ[0][3].ajout_mine();
+        champ[0][5].ajout_mine();
+        champ[1][4].ajout_mine();
+        champ[3][4].ajout_mine();
+        champ[5][5].ajout_mine();
+        champ[7][3].ajout_mine();
+        champ[2][6].ajout_mine();
+        champ[7][7].ajout_mine();
+        champ[1][6].ajout_mine();
+        champ[4][6].ajout_mine();
+       
+    }
+    
 
     void compte_voisins()
     {
@@ -230,6 +253,45 @@ public:
 
         Affichage();
     }
+    void open (int x,int y ,string z) //methode open pour le tutoriel
+    {
+        int h,t;
+        string d;
+        do
+        {
+            cout<<"choisir un carrau: d1=    tapez  "<< x<< endl;
+            cin>>h;
+            
+        }
+        while( h!=x);
+        do
+        {
+            cout<<"d2=   tapez   " <<y << endl;
+            cin>>t;
+            
+        }
+        while(t!=y);
+        do
+        {
+            cout<<"quelle est la decision :ouvrir(o) drapau(d)     tapez "<< z <<endl;
+            cin>>d;
+            
+        }
+        while(d != z);
+        if(d=="o" && (champ[h][t].get_nb_minevoisin()==0 ))
+        {
+            open_rec(h,t);
+        }
+        
+        else
+        {
+            champ[h][t].set_etat(d);
+        }
+        
+    
+        Affichage();
+    
+
 
     void open_rec(int i,int j)
     {
