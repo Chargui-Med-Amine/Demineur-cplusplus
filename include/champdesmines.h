@@ -290,7 +290,7 @@ public:
         
     
         Affichage();
-    
+    }
 
 
     void open_rec(int i,int j)
