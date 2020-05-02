@@ -5,6 +5,8 @@
 #include "champdesmines.h"
 #include <iomanip>
 #include <chrono>
+#include <fstream>
+#include <vector>
 using namespace std;
 //test
 int main()
@@ -36,9 +38,9 @@ int main()
         while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_carrau()-m.get_nb_mines()))
         {
             m.open();
-            
+
         }
-        
+
         if((m.get_res()==1))
         {
             m.aff_lose();
@@ -48,25 +50,25 @@ int main()
             cout<<"|----   |----  |----   |    |  |    | "<<endl;
             cout<<"|       |      |   \\   |    /  |    | "<<endl;
             cout<<"|       -----  |    \\  -----   ------ \a"<<endl<<endl<<endl;
-            
-            
+
+
         }
         auto end = chrono::steady_clock::now();
-        
+
         cout << "###### Temps ecoule : [ "<< std::setw(2) << std::setfill('0')
         << (chrono::duration_cast<chrono::seconds>(end - start).count())/60
         <<  ":"<< std::setw(2) << std::setfill('0')<<(chrono::duration_cast<chrono::seconds>(end - start).count())%60
         <<" ]  ######" <<endl;
-    
-   
 
-        
+
+
+
     }
     if (decision=="non")
     {
 
 
-    
+
 
     champdesmines m;
     m.compte_voisins();
@@ -97,6 +99,7 @@ int main()
 		<< (chrono::duration_cast<chrono::seconds>(end - start).count())/60
 		<<  ":"<< std::setw(2) << std::setfill('0')<<(chrono::duration_cast<chrono::seconds>(end - start).count())%60
 		<<" ]  ######" <<endl;
+		m.score((chrono::duration_cast<chrono::seconds>(end - start).count()),m.get_res());
     }
     return 0;
 }

@@ -5,7 +5,9 @@
 #include <algorithm>
 #include <cstdlib>
 #include <ctime>
-
+#include <fstream>
+#include <vector>
+#include <iomanip>
 
 class champdesmines
 {
@@ -79,9 +81,9 @@ public:
         champ[7][7].ajout_mine();
         champ[1][6].ajout_mine();
         champ[4][6].ajout_mine();
-       
+
     }
-    
+
 
     void compte_voisins()
     {
@@ -261,34 +263,34 @@ public:
         {
             cout<<"choisir un carrau: d1=    tapez  "<< x<< endl;
             cin>>h;
-            
+
         }
         while( h!=x);
         do
         {
             cout<<"d2=   tapez   " <<y << endl;
             cin>>t;
-            
+
         }
         while(t!=y);
         do
         {
             cout<<"quelle est la decision :ouvrir(o) drapau(d)     tapez "<< z <<endl;
             cin>>d;
-            
+
         }
         while(d != z);
         if(d=="o" && (champ[h][t].get_nb_minevoisin()==0 ))
         {
             open_rec(h,t);
         }
-        
+
         else
         {
             champ[h][t].set_etat(d);
         }
-        
-    
+
+
         Affichage();
     }
 
@@ -315,6 +317,69 @@ public:
 
             }
         }
+    }
+    void score(int new_score,int r)
+    {
+    std::ifstream score ("score.txt");
+    std::vector<int> v;
+    int n;
+    while(score >> n)
+    {
+        v.push_back(n);
+    }
+    if(r!=1)
+    {
+
+
+    std::ofstream score2 ("score.txt");
+    if (niveau=="facile" && v[0]>new_score)
+    {
+        v[0]=new_score;
+        cout<<"###### Bravo , nouveau meilleur score pour la difficulte "<<niveau<<" : [ "<< std::setw(2) << std::setfill('0')
+		<< new_score/60<<  ":"<< std::setw(2) << std::setfill('0')<<new_score%60<<" ]  ######" <<endl;
+
+    }
+    else if(niveau=="moyenne" && v[1]>new_score)
+    {
+        v[1]=new_score;
+        cout<<"###### Bravo , nouveau meilleur score pour la difficulte "<<niveau<<" : [ "<< std::setw(2) << std::setfill('0')
+		<< new_score/60<<  ":"<< std::setw(2) << std::setfill('0')<<new_score%60<<" ]  ######" <<endl;
+
+    }
+    else if(niveau=="dificile" && v[1]>new_score)
+    {
+        v[2]=new_score;
+        cout<<"###### Bravo , nouveau meilleur score pour la difficulte "<<niveau<<" : [ "<< std::setw(2) << std::setfill('0')
+		<< new_score/60<<  ":"<< std::setw(2) << std::setfill('0')<<new_score%60<<" ]  ######" <<endl;
+    }
+    for(int n:v)
+    {
+        score2 <<n<<endl;
+    }
+    score2.close();
+    }
+    else
+    {
+        if (niveau=="facile")
+    {
+
+        cout<<"###### Le meilleur score pour la difficulte "<<niveau<<" est : [ "<< std::setw(2) << std::setfill('0')
+		<< v[0]/60<<  ":"<< std::setw(2) << std::setfill('0')<<v[0]%60<<" ]  ######" <<endl;
+
+    }
+    else if(niveau=="moyenne")
+    {
+        cout<<"###### Le meilleur score pour la difficulte "<<niveau<<" est : [ "<< std::setw(2) << std::setfill('0')
+		<< v[1]/60<<  ":"<< std::setw(2) << std::setfill('0')<<v[1]%60<<" ]  ######" <<endl;
+
+    }
+    else if(niveau=="dificile")
+    {
+        cout<<"###### Le meilleur score pour la difficulte "<<niveau<<" est : [ "<< std::setw(2) << std::setfill('0')
+		<< v[2]/60<<  ":"<< std::setw(2) << std::setfill('0')<<v[2]%60<<" ]  ######" <<endl;
+    }
+    }
+
     }
 
     ~champdesmines()
