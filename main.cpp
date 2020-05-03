@@ -13,7 +13,11 @@ int main()
 {
 
     string decision;
-    cout<< "Vous ne connaissez pas la jeu ?, tapez oui pour un tutoriel/non pour continuer"<< endl;
+    cout<<"\n\t\t\t\t\t**Bienvenue au Demineur**"<<endl;
+    cout<<"\t\t\t\t\t*************************"<<endl;
+    cout<<"\n\n\t\t\t\t Vous ne connaissez pas la jeu ? tapez "<<endl;
+    cout<<"\n\t\t\t\t\t  oui pour un tutoriel"<<endl;
+    cout<<"\n\t\t\t\t\t  non pour continuer"<< endl;
     cin>>decision;
     if (decision=="oui")
     {

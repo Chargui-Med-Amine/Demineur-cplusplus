@@ -22,7 +22,8 @@ public:
     champdesmines()
     {
         do {
-            cout << "choisir le niveau (facile/moyenne/dificile)";
+            cout << "\t\t\t\tchoisir le niveau (facile/moyenne/dificile)"<<endl;
+
             cin>>niveau;
         }while (niveau!="facile"&&niveau!="moyenne"&&niveau!="dificile");
         if (niveau == "facile") {
