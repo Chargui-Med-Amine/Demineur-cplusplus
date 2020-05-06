@@ -84,6 +84,703 @@ public:
         champ[4][6].ajout_mine();
 
     }
+    //constructeur pour autour du monde
+    champdesmines(bool b)
+    {
+        string continant;
+        do {
+            cout << "choisir le continant : Afrique(af)/Amerique du sud(as)/Europe(e)/Australie(au)/Amerique du nord(an)/Asie(a)"<<endl;
+            cin>>continant;
+        }while (continant!="af"&&continant!="as"&&continant!="e"&&continant!="au"&&continant!="an"&&continant!="a");
+        if (continant == "af") {
+
+        d1 = 18;
+        d2 = 16;
+        nb_mines = 25;
+        champ=new carrau*[d1];
+        for(int i=0;i<d1;i++)
+        {
+            champ[i]=new carrau[d2];
+        }
+
+       //1
+        champ[0][0].set_est_trans(b);
+        champ[0][1].set_est_trans(b);
+        champ[0][2].set_est_trans(b);
+        champ[0][6].set_est_trans(b);
+        champ[0][7].set_est_trans(b);
+        champ[0][8].set_est_trans(b);
+        champ[0][9].set_est_trans(b);
+        champ[0][10].set_est_trans(b);
+        champ[0][11].set_est_trans(b);
+        champ[0][12].set_est_trans(b);
+        champ[0][13].set_est_trans(b);
+        champ[0][14].set_est_trans(b);
+        champ[0][15].set_est_trans(b);
+        //2
+        champ[1][0].set_est_trans(b);
+        champ[1][1].set_est_trans(b);
+        champ[1][7].set_est_trans(b);
+        champ[1][10].set_est_trans(b);
+        champ[1][11].set_est_trans(b);
+        champ[1][12].set_est_trans(b);
+        champ[1][13].set_est_trans(b);
+        champ[1][14].set_est_trans(b);
+        champ[1][15].set_est_trans(b);
+        //3
+        champ[2][0].set_est_trans(b);
+        champ[2][11].set_est_trans(b);
+        champ[2][12].set_est_trans(b);
+        champ[2][13].set_est_trans(b);
+        champ[2][14].set_est_trans(b);
+        champ[2][15].set_est_trans(b);
+        //2
+        champ[3][11].set_est_trans(b);
+        champ[3][12].set_est_trans(b);
+        champ[3][13].set_est_trans(b);
+        champ[3][14].set_est_trans(b);
+        champ[3][15].set_est_trans(b);
+        //5
+        champ[4][12].set_est_trans(b);
+        champ[4][13].set_est_trans(b);
+        champ[4][14].set_est_trans(b);
+        champ[4][15].set_est_trans(b);
+        //6
+        champ[5][13].set_est_trans(b);
+        champ[5][15].set_est_trans(b);
+        //7
+        champ[6][14].set_est_trans(b);
+        champ[7][0].set_est_trans(b);
+        champ[8][0].set_est_trans(b);
+        champ[8][1].set_est_trans(b);
+        champ[8][4].set_est_trans(b);
+        champ[8][5].set_est_trans(b);
+        champ[8][15].set_est_trans(b);
+        //10
+        champ[9][0].set_est_trans(b);
+        champ[9][1].set_est_trans(b);
+        champ[9][2].set_est_trans(b);
+        champ[9][3].set_est_trans(b);
+        champ[9][4].set_est_trans(b);
+        champ[9][14].set_est_trans(b);
+        champ[9][15].set_est_trans(b);
+
+        champ[10][0].set_est_trans(b);
+        champ[10][1].set_est_trans(b);
+        champ[10][2].set_est_trans(b);
+        champ[10][3].set_est_trans(b);
+        champ[10][4].set_est_trans(b);
+        champ[10][5].set_est_trans(b);
+        champ[10][13].set_est_trans(b);
+        champ[10][14].set_est_trans(b);
+        champ[10][15].set_est_trans(b);
+        champ[11][0].set_est_trans(b);
+        champ[11][1].set_est_trans(b);
+        champ[11][2].set_est_trans(b);
+        champ[11][3].set_est_trans(b);
+        champ[11][4].set_est_trans(b);
+        champ[11][5].set_est_trans(b);
+        champ[11][6].set_est_trans(b);
+        champ[11][13].set_est_trans(b);
+        champ[11][14].set_est_trans(b);
+        champ[11][15].set_est_trans(b);
+        champ[12][0].set_est_trans(b);
+        champ[12][1].set_est_trans(b);
+        champ[12][2].set_est_trans(b);
+        champ[12][3].set_est_trans(b);
+        champ[12][4].set_est_trans(b);
+        champ[12][5].set_est_trans(b);
+        champ[12][13].set_est_trans(b);
+        champ[13][0].set_est_trans(b);
+        champ[13][1].set_est_trans(b);
+        champ[13][2].set_est_trans(b);
+        champ[13][3].set_est_trans(b);
+        champ[13][4].set_est_trans(b);
+        champ[13][5].set_est_trans(b);
+        champ[13][13].set_est_trans(b);
+        champ[13][15].set_est_trans(b);
+        champ[14][0].set_est_trans(b);
+        champ[14][1].set_est_trans(b);
+        champ[14][2].set_est_trans(b);
+        champ[14][3].set_est_trans(b);
+        champ[14][4].set_est_trans(b);
+        champ[14][5].set_est_trans(b);
+        champ[14][6].set_est_trans(b);
+        champ[14][12].set_est_trans(b);
+        champ[14][15].set_est_trans(b);
+        champ[15][0].set_est_trans(b);
+        champ[15][1].set_est_trans(b);
+        champ[15][2].set_est_trans(b);
+        champ[15][3].set_est_trans(b);
+        champ[15][4].set_est_trans(b);
+        champ[15][5].set_est_trans(b);
+        champ[15][6].set_est_trans(b);
+        champ[15][11].set_est_trans(b);
+        champ[15][12].set_est_trans(b);
+        champ[15][14].set_est_trans(b);
+        champ[15][15].set_est_trans(b);
+        champ[16][0].set_est_trans(b);
+        champ[16][1].set_est_trans(b);
+        champ[16][2].set_est_trans(b);
+        champ[16][3].set_est_trans(b);
+        champ[16][4].set_est_trans(b);
+        champ[16][5].set_est_trans(b);
+        champ[16][6].set_est_trans(b);
+        champ[16][7].set_est_trans(b);
+        champ[16][11].set_est_trans(b);
+        champ[16][12].set_est_trans(b);
+        champ[16][13].set_est_trans(b);
+        champ[16][14].set_est_trans(b);
+        champ[16][15].set_est_trans(b);
+        champ[17][0].set_est_trans(b);
+        champ[17][1].set_est_trans(b);
+        champ[17][2].set_est_trans(b);
+        champ[17][3].set_est_trans(b);
+        champ[17][4].set_est_trans(b);
+        champ[17][5].set_est_trans(b);
+        champ[17][6].set_est_trans(b);
+        champ[17][7].set_est_trans(b);
+        champ[17][10].set_est_trans(b);
+        champ[17][11].set_est_trans(b);
+        champ[17][12].set_est_trans(b);
+        champ[17][13].set_est_trans(b);
+        champ[17][14].set_est_trans(b);
+        champ[17][15].set_est_trans(b);
+
+        int cp=0;
+        while (cp!=nb_mines)
+        {
+            int x=rand() % d1;
+            int y=rand() % d2;
+            if(champ[x][y].get_est_mine()==false&&champ[x][y].get_est_trans()==false)
+            {champ[x][y].ajout_mine();
+                cp++;
+            }
+        }
+        }
+        else if(continant == "as") {
+            d1 = 11;
+            d2 = 9;
+            nb_mines = 7;
+            champ=new carrau*[d1];
+        for(int i=0;i<d1;i++)
+        {
+            champ[i]=new carrau[d2];
+        }
+
+       //1
+        champ[0][2].set_est_trans(b);
+        champ[0][3].set_est_trans(b);
+        champ[0][4].set_est_trans(b);
+        champ[0][5].set_est_trans(b);
+        champ[0][6].set_est_trans(b);
+        champ[0][7].set_est_trans(b);
+        champ[0][8].set_est_trans(b);
+        champ[0][9].set_est_trans(b);
+        //2
+        champ[1][0].set_est_trans(b);
+        champ[1][3].set_est_trans(b);
+        champ[1][4].set_est_trans(b);
+        champ[1][5].set_est_trans(b);
+        champ[1][6].set_est_trans(b);
+        champ[1][7].set_est_trans(b);
+        champ[1][8].set_est_trans(b);
+        champ[1][9].set_est_trans(b);
+        //3
+        champ[2][0].set_est_trans(b);
+        champ[2][1].set_est_trans(b);
+        champ[2][2].set_est_trans(b);
+        champ[2][6].set_est_trans(b);
+        champ[2][7].set_est_trans(b);
+        champ[2][8].set_est_trans(b);
+        champ[2][9].set_est_trans(b);
+        //4
+        champ[3][0].set_est_trans(b);
+        champ[3][1].set_est_trans(b);
+        champ[3][7].set_est_trans(b);
+        champ[3][8].set_est_trans(b);
+        champ[3][9].set_est_trans(b);
+        //5
+        champ[4][0].set_est_trans(b);
+        champ[4][1].set_est_trans(b);
+        champ[4][9].set_est_trans(b);
+        //6
+        champ[5][0].set_est_trans(b);
+        champ[5][1].set_est_trans(b);
+        champ[5][2].set_est_trans(b);
+        champ[5][8].set_est_trans(b);
+        champ[5][9].set_est_trans(b);
+        //7
+        champ[6][0].set_est_trans(b);
+        champ[6][1].set_est_trans(b);
+        champ[6][2].set_est_trans(b);
+        champ[6][3].set_est_trans(b);
+        champ[6][8].set_est_trans(b);
+        champ[6][9].set_est_trans(b);
+        //8
+        champ[7][0].set_est_trans(b);
+        champ[7][1].set_est_trans(b);
+        champ[7][2].set_est_trans(b);
+        champ[7][3].set_est_trans(b);
+        champ[7][7].set_est_trans(b);
+        champ[7][8].set_est_trans(b);
+        champ[7][9].set_est_trans(b);
+        //9
+        champ[8][0].set_est_trans(b);
+        champ[8][1].set_est_trans(b);
+        champ[8][2].set_est_trans(b);
+        champ[8][3].set_est_trans(b);
+        champ[8][6].set_est_trans(b);
+        champ[8][7].set_est_trans(b);
+        champ[8][8].set_est_trans(b);
+        champ[8][9].set_est_trans(b);
+        //10
+        champ[9][0].set_est_trans(b);
+        champ[9][1].set_est_trans(b);
+        champ[9][2].set_est_trans(b);
+        champ[9][5].set_est_trans(b);
+        champ[9][6].set_est_trans(b);
+        champ[9][7].set_est_trans(b);
+        champ[9][8].set_est_trans(b);
+        champ[9][9].set_est_trans(b);
+        //11
+        champ[10][0].set_est_trans(b);
+        champ[10][1].set_est_trans(b);
+        champ[10][2].set_est_trans(b);
+        champ[10][4].set_est_trans(b);
+        champ[10][5].set_est_trans(b);
+        champ[10][6].set_est_trans(b);
+        champ[10][7].set_est_trans(b);
+        champ[10][8].set_est_trans(b);
+        champ[10][9].set_est_trans(b);
+        int cp=0;
+        while (cp!=nb_mines)
+        {
+            int x=rand() % d1;
+            int y=rand() % d2;
+            if(champ[x][y].get_est_mine()==false&&champ[x][y].get_est_trans()==false)
+            {champ[x][y].ajout_mine();
+                cp++;
+            }
+        }
+
+        }
+        else if(continant == "e") {
+            d1 = 11;
+            d2 = 10;
+            nb_mines = 10;
+            champ=new carrau*[d1];
+        for(int i=0;i<d1;i++)
+        {
+            champ[i]=new carrau[d2];
+        }
+
+       //1
+        champ[0][0].set_est_trans(b);
+        champ[0][1].set_est_trans(b);
+        champ[0][2].set_est_trans(b);
+        champ[0][3].set_est_trans(b);
+        champ[0][4].set_est_trans(b);
+        champ[0][5].set_est_trans(b);
+        champ[0][6].set_est_trans(b);
+        champ[0][8].set_est_trans(b);
+        champ[0][9].set_est_trans(b);
+        //2
+        champ[1][0].set_est_trans(b);
+        champ[1][1].set_est_trans(b);
+        champ[1][2].set_est_trans(b);
+        champ[1][3].set_est_trans(b);
+        champ[1][4].set_est_trans(b);
+        //3
+        champ[2][0].set_est_trans(b);
+        champ[2][1].set_est_trans(b);
+        champ[2][2].set_est_trans(b);
+        champ[2][3].set_est_trans(b);
+        champ[2][9].set_est_trans(b);
+        //4
+        champ[3][0].set_est_trans(b);
+        champ[3][1].set_est_trans(b);
+        champ[3][2].set_est_trans(b);
+        champ[3][6].set_est_trans(b);
+        //5
+        champ[4][0].set_est_trans(b);
+        champ[4][2].set_est_trans(b);
+        champ[4][3].set_est_trans(b);
+        champ[4][6].set_est_trans(b);
+        champ[5][2].set_est_trans(b);
+        champ[5][3].set_est_trans(b);
+        //7
+        champ[6][0].set_est_trans(b);
+        //8
+        champ[7][0].set_est_trans(b);
+        champ[7][1].set_est_trans(b);
+        //9
+        champ[8][3].set_est_trans(b);
+        champ[8][8].set_est_trans(b);
+        champ[8][9].set_est_trans(b);
+        //10
+        champ[9][2].set_est_trans(b);
+        champ[9][3].set_est_trans(b);
+        champ[9][4].set_est_trans(b);
+        champ[9][5].set_est_trans(b);
+        champ[9][7].set_est_trans(b);
+        champ[10][0].set_est_trans(b);
+        champ[10][1].set_est_trans(b);
+        champ[10][2].set_est_trans(b);
+        champ[10][3].set_est_trans(b);
+        champ[10][4].set_est_trans(b);
+        champ[10][6].set_est_trans(b);
+        champ[10][7].set_est_trans(b);
+        champ[10][8].set_est_trans(b);
+        champ[10][9].set_est_trans(b);
+
+        int cp=0;
+        while (cp!=nb_mines)
+        {
+            int x=rand() % d1;
+            int y=rand() % d2;
+            if(champ[x][y].get_est_mine()==false&&champ[x][y].get_est_trans()==false)
+            {champ[x][y].ajout_mine();
+                cp++;
+            }
+        }
+
+        }
+        else if(continant == "au") {
+            d1 = 10;
+            d2 = 12;
+            nb_mines = 6;
+            champ=new carrau*[d1];
+        for(int i=0;i<d1;i++)
+        {
+            champ[i]=new carrau[d2];
+        }
+
+       //1
+        champ[0][0].set_est_trans(b);
+        champ[0][1].set_est_trans(b);
+        champ[0][2].set_est_trans(b);
+        champ[0][3].set_est_trans(b);
+        champ[0][4].set_est_trans(b);
+        champ[0][5].set_est_trans(b);
+        champ[0][6].set_est_trans(b);
+        champ[0][7].set_est_trans(b);
+        champ[0][8].set_est_trans(b);
+        champ[0][9].set_est_trans(b);
+        champ[0][10].set_est_trans(b);
+        champ[0][11].set_est_trans(b);
+        //2
+        champ[1][0].set_est_trans(b);
+        champ[1][1].set_est_trans(b);
+        champ[1][2].set_est_trans(b);
+        champ[1][3].set_est_trans(b);
+        champ[1][4].set_est_trans(b);
+        champ[1][6].set_est_trans(b);
+        champ[1][7].set_est_trans(b);
+        champ[1][8].set_est_trans(b);
+        champ[1][9].set_est_trans(b);
+        champ[1][10].set_est_trans(b);
+        champ[1][11].set_est_trans(b);
+        //3
+        champ[2][0].set_est_trans(b);
+        champ[2][1].set_est_trans(b);
+        champ[2][4].set_est_trans(b);
+        champ[2][6].set_est_trans(b);
+        champ[2][7].set_est_trans(b);
+        champ[2][8].set_est_trans(b);
+        champ[2][9].set_est_trans(b);
+        champ[2][10].set_est_trans(b);
+        champ[2][11].set_est_trans(b);
+        //4
+        champ[3][0].set_est_trans(b);
+        champ[3][7].set_est_trans(b);
+        champ[3][8].set_est_trans(b);
+        champ[3][9].set_est_trans(b);
+        champ[3][10].set_est_trans(b);
+        champ[3][11].set_est_trans(b);
+        //5
+
+        champ[4][8].set_est_trans(b);
+        champ[4][9].set_est_trans(b);
+        champ[4][10].set_est_trans(b);
+        champ[4][11].set_est_trans(b);
+        //6
+        //champ[5][8].set_est_trans(b);
+        champ[5][9].set_est_trans(b);
+        champ[5][10].set_est_trans(b);
+        champ[5][11].set_est_trans(b);
+        //7
+        champ[6][2].set_est_trans(b);
+        champ[6][3].set_est_trans(b);
+        //champ[6][8].set_est_trans(b);
+        champ[6][9].set_est_trans(b);
+        champ[6][10].set_est_trans(b);
+        champ[6][11].set_est_trans(b);
+        //8
+        champ[7][0].set_est_trans(b);
+        champ[7][1].set_est_trans(b);
+        champ[7][2].set_est_trans(b);
+        champ[7][3].set_est_trans(b);
+        champ[7][4].set_est_trans(b);
+        champ[7][7].set_est_trans(b);
+        champ[7][8].set_est_trans(b);
+        champ[7][9].set_est_trans(b);
+        champ[7][10].set_est_trans(b);
+        //9
+        champ[8][0].set_est_trans(b);
+        champ[8][1].set_est_trans(b);
+        champ[8][2].set_est_trans(b);
+        champ[8][3].set_est_trans(b);
+        champ[8][4].set_est_trans(b);
+        champ[8][5].set_est_trans(b);
+        champ[8][6].set_est_trans(b);
+        champ[8][7].set_est_trans(b);
+        champ[8][8].set_est_trans(b);
+        champ[8][9].set_est_trans(b);
+        champ[8][11].set_est_trans(b);
+        //10
+        champ[9][0].set_est_trans(b);
+        champ[9][1].set_est_trans(b);
+        champ[9][2].set_est_trans(b);
+        champ[9][3].set_est_trans(b);
+        champ[9][4].set_est_trans(b);
+        champ[9][5].set_est_trans(b);
+        //champ[9][6].set_est_trans(b);
+        champ[9][7].set_est_trans(b);
+        champ[9][8].set_est_trans(b);
+        champ[9][10].set_est_trans(b);
+        champ[9][11].set_est_trans(b);
+        int cp=0;
+        while (cp!=nb_mines)
+        {
+            int x=rand() % d1;
+            int y=rand() % d2;
+            if(champ[x][y].get_est_mine()==false&&champ[x][y].get_est_trans()==false)
+            {champ[x][y].ajout_mine();
+                cp++;
+            }
+        }
+
+        }
+        else if(continant == "an") {
+            d1 = 12;
+            d2 = 14;
+            nb_mines = 12;
+            champ=new carrau*[d1];
+        for(int i=0;i<d1;i++)
+        {
+            champ[i]=new carrau[d2];
+        }
+
+       //1
+        champ[0][0].set_est_trans(b);
+        champ[0][1].set_est_trans(b);
+        champ[0][2].set_est_trans(b);
+        champ[0][3].set_est_trans(b);
+        champ[0][4].set_est_trans(b);
+        champ[0][8].set_est_trans(b);
+        champ[0][9].set_est_trans(b);
+        champ[0][12].set_est_trans(b);
+        champ[0][13].set_est_trans(b);
+        //2
+        champ[1][0].set_est_trans(b);
+        champ[1][10].set_est_trans(b);
+        champ[1][13].set_est_trans(b);
+        //3
+        champ[2][10].set_est_trans(b);
+        champ[2][11].set_est_trans(b);
+        champ[2][12].set_est_trans(b);
+        champ[2][13].set_est_trans(b);
+        //4
+        champ[3][0].set_est_trans(b);
+        champ[3][1].set_est_trans(b);
+        champ[3][2].set_est_trans(b);
+        champ[3][9].set_est_trans(b);
+        champ[3][10].set_est_trans(b);
+        champ[3][13].set_est_trans(b);
+        //5
+        champ[4][0].set_est_trans(b);
+        champ[4][1].set_est_trans(b);
+        champ[4][2].set_est_trans(b);
+        champ[4][10].set_est_trans(b);
+        //6
+        champ[5][0].set_est_trans(b);
+        champ[5][1].set_est_trans(b);
+        champ[5][2].set_est_trans(b);
+        champ[5][3].set_est_trans(b);
+        champ[5][13].set_est_trans(b);
+        //7
+        champ[6][0].set_est_trans(b);
+        champ[6][1].set_est_trans(b);
+        champ[6][2].set_est_trans(b);
+        champ[6][3].set_est_trans(b);
+        champ[6][12].set_est_trans(b);
+        champ[6][13].set_est_trans(b);
+        //8
+        champ[7][0].set_est_trans(b);
+        champ[7][1].set_est_trans(b);
+        champ[7][2].set_est_trans(b);
+        champ[7][3].set_est_trans(b);
+        champ[7][4].set_est_trans(b);
+        champ[7][11].set_est_trans(b);
+        champ[7][12].set_est_trans(b);
+        champ[7][13].set_est_trans(b);
+        //9
+        champ[8][0].set_est_trans(b);
+        champ[8][1].set_est_trans(b);
+        champ[8][2].set_est_trans(b);
+        champ[8][3].set_est_trans(b);
+        champ[8][4].set_est_trans(b);
+        champ[8][5].set_est_trans(b);
+        champ[8][8].set_est_trans(b);
+        champ[8][9].set_est_trans(b);
+        champ[8][11].set_est_trans(b);
+        champ[8][12].set_est_trans(b);
+        champ[8][13].set_est_trans(b);
+        //10
+        champ[9][0].set_est_trans(b);
+        champ[9][1].set_est_trans(b);
+        champ[9][2].set_est_trans(b);
+        champ[9][3].set_est_trans(b);
+        champ[9][4].set_est_trans(b);
+        champ[9][5].set_est_trans(b);
+        champ[9][6].set_est_trans(b);
+        champ[9][9].set_est_trans(b);
+        champ[9][10].set_est_trans(b);
+        champ[9][11].set_est_trans(b);
+        champ[9][12].set_est_trans(b);
+        champ[9][13].set_est_trans(b);
+        //11
+        champ[10][0].set_est_trans(b);
+        champ[10][1].set_est_trans(b);
+        champ[10][2].set_est_trans(b);
+        champ[10][3].set_est_trans(b);
+        champ[10][4].set_est_trans(b);
+        champ[10][5].set_est_trans(b);
+        champ[10][6].set_est_trans(b);
+        champ[10][7].set_est_trans(b);
+        champ[10][10].set_est_trans(b);
+        champ[10][11].set_est_trans(b);
+        champ[10][12].set_est_trans(b);
+        champ[10][13].set_est_trans(b);
+        //12
+        champ[11][0].set_est_trans(b);
+        champ[11][1].set_est_trans(b);
+        champ[11][2].set_est_trans(b);
+        champ[11][3].set_est_trans(b);
+        champ[11][4].set_est_trans(b);
+        champ[11][5].set_est_trans(b);
+        champ[11][6].set_est_trans(b);
+        champ[11][7].set_est_trans(b);
+        champ[11][8].set_est_trans(b);
+        champ[11][10].set_est_trans(b);
+        champ[11][11].set_est_trans(b);
+        champ[11][12].set_est_trans(b);
+        champ[11][13].set_est_trans(b);
+
+        int cp=0;
+        while (cp!=nb_mines)
+        {
+            int x=rand() % d1;
+            int y=rand() % d2;
+            if(champ[x][y].get_est_mine()==false&&champ[x][y].get_est_trans()==false)
+            {champ[x][y].ajout_mine();
+                cp++;
+            }
+        }
+
+        }
+        else if(continant == "a") {
+            d1 = 13;
+            d2 = 14;
+            nb_mines = 15;
+            champ=new carrau*[d1];
+        for(int i=0;i<d1;i++)
+        {
+            champ[i]=new carrau[d2];
+        }
+
+       //1
+        champ[0][0].set_est_trans(b);
+        champ[0][1].set_est_trans(b);
+        champ[0][2].set_est_trans(b);
+        champ[0][3].set_est_trans(b);
+        champ[0][4].set_est_trans(b);
+        champ[0][5].set_est_trans(b);
+        champ[0][6].set_est_trans(b);
+        //2
+        champ[1][0].set_est_trans(b);
+        champ[1][1].set_est_trans(b);
+        champ[1][2].set_est_trans(b);
+        champ[1][3].set_est_trans(b);
+        champ[1][4].set_est_trans(b);
+        champ[1][11].set_est_trans(b);
+        champ[1][12].set_est_trans(b);
+        //3
+        champ[2][0].set_est_trans(b);
+        champ[2][1].set_est_trans(b);
+        champ[2][2].set_est_trans(b);
+        champ[2][12].set_est_trans(b);
+        champ[2][13].set_est_trans(b);
+        champ[3][13].set_est_trans(b);
+        champ[6][11].set_est_trans(b);
+        champ[6][13].set_est_trans(b);
+        //8
+        champ[7][0].set_est_trans(b);
+        champ[7][10].set_est_trans(b);
+        champ[7][11].set_est_trans(b);
+        champ[7][13].set_est_trans(b);
+        //9
+        champ[8][0].set_est_trans(b);
+        champ[8][1].set_est_trans(b);
+        champ[8][10].set_est_trans(b);
+        champ[8][12].set_est_trans(b);
+        champ[8][13].set_est_trans(b);
+        //10
+        champ[9][0].set_est_trans(b);
+        champ[9][1].set_est_trans(b);
+        champ[9][9].set_est_trans(b);
+        champ[9][10].set_est_trans(b);
+        champ[9][11].set_est_trans(b);
+        champ[9][12].set_est_trans(b);
+        champ[9][13].set_est_trans(b);
+        //11
+        champ[10][9].set_est_trans(b);
+        champ[10][11].set_est_trans(b);
+        champ[10][12].set_est_trans(b);
+        champ[10][13].set_est_trans(b);
+        champ[11][3].set_est_trans(b);
+        champ[11][4].set_est_trans(b);
+        champ[11][9].set_est_trans(b);
+        champ[11][5].set_est_trans(b);
+        champ[11][10].set_est_trans(b);
+        champ[11][12].set_est_trans(b);
+        champ[11][13].set_est_trans(b);
+        champ[12][0].set_est_trans(b);
+        champ[12][4].set_est_trans(b);
+        champ[12][5].set_est_trans(b);
+        champ[12][6].set_est_trans(b);
+        champ[12][8].set_est_trans(b);
+        champ[12][9].set_est_trans(b);
+        champ[12][10].set_est_trans(b);
+        champ[12][11].set_est_trans(b);
+        champ[12][12].set_est_trans(b);
+        champ[12][13].set_est_trans(b);
+        int cp=0;
+        while (cp!=nb_mines)
+        {
+            int x=rand() % d1;
+            int y=rand() % d2;
+            if(champ[x][y].get_est_mine()==false&&champ[x][y].get_est_trans()==false)
+            {champ[x][y].ajout_mine();
+                cp++;
+            }
+        }
+
+        }
+
+
+    }
 
 
     void compte_voisins()
@@ -144,14 +841,18 @@ public:
             for(j=0;j<d2;j++)
 
             {
-                if((champ[i][j].get_etat()=="o") && (champ[i][j].get_est_mine()==false) )
+                if(champ[i][j].get_est_trans()==true)
+                {
+                    cout<<"   "<<" ";
+                }
+                else if((champ[i][j].get_etat()=="o") && (champ[i][j].get_est_mine()==false) )
 
                     cout<<"["<<champ[i][j].get_nb_minevoisin()<<"]"<<" ";
 
                 else if(champ[i][j].get_etat()=="d")
                 {
 
-                    cout<<"[d]"<<" ";
+                   cout<<"[d]"<<" ";
                     nb_dra++;
                 }
                 else if((champ[i][j].get_etat()=="o") && (champ[i][j].get_est_mine()==true) )
@@ -191,7 +892,7 @@ public:
         {
             for(int j=0;j<d2;j++)
             {
-                if(champ[i][j].get_etat()=="o")
+                if(champ[i][j].get_etat()=="o" || champ[i][j].get_est_trans()==true)
                     k++;
             }
         }

@@ -11,7 +11,7 @@ using namespace std;
 //test
 int main()
 {
-
+    string type_jeu;
     string decision;
     cout<<"\n\t\t\t\t\t**Bienvenue au Demineur**"<<endl;
     cout<<"\t\t\t\t\t*************************"<<endl;
@@ -70,14 +70,15 @@ int main()
     }
     if (decision=="non")
     {
-
-
-
-
-    champdesmines m;
+    cout<<"                     Vous voulez jouer demineur classique(c) ou autour du monde(s)"<<endl;
+    cin>>type_jeu;
+    if(type_jeu=="s")
+    {
+        srand((int)time(0));
+    champdesmines m(true);
     m.compte_voisins();
     m.Affichage();
-    srand((int)time(0));
+
     auto start = chrono::steady_clock::now();
     while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_carrau()-m.get_nb_mines()))
     {
@@ -105,5 +106,46 @@ int main()
 		<<" ]  ######" <<endl;
 		m.score((chrono::duration_cast<chrono::seconds>(end - start).count()),m.get_res());
     }
+
+
+    else if(type_jeu=="c")
+    {
+
+    srand((int)time(0));
+    champdesmines m;
+    m.compte_voisins();
+    m.Affichage();
+
+    auto start = chrono::steady_clock::now();
+    while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_carrau()-m.get_nb_mines()))
+    {
+        m.open();
+
+    }
+
+    if((m.get_res()==1))
+    {
+        m.aff_lose();
+        m.Affichage();
+        cout<<endl<<endl<<"-----   -----  -----   -----   |    | "<<endl;
+        cout<<"|    |  |      |    |  |    \\  |    | "<<endl;
+        cout<<"|----   |----  |----   |    |  |    | "<<endl;
+        cout<<"|       |      |   \\   |    /  |    | "<<endl;
+        cout<<"|       -----  |    \\  -----   ------ \a"<<endl<<endl<<endl;
+
+
+    }
+    auto end = chrono::steady_clock::now();
+
+	cout << "###### Temps ecoule : [ "<< std::setw(2) << std::setfill('0')
+		<< (chrono::duration_cast<chrono::seconds>(end - start).count())/60
+		<<  ":"<< std::setw(2) << std::setfill('0')<<(chrono::duration_cast<chrono::seconds>(end - start).count())%60
+		<<" ]  ######" <<endl;
+		m.score((chrono::duration_cast<chrono::seconds>(end - start).count()),m.get_res());
+    }
+    }
+
+
+
     return 0;
 }

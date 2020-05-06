@@ -6,12 +6,13 @@ using namespace std;
 class carrau
 {
 private:
+    bool est_transparant;
     bool est_mine;//init a false
     string etat;//(c)cacheé,(d)drapeau,(O)ouvert
     int nb_minevoisin;//init a -1
     bool rec;
 public:
-    carrau(): est_mine(false),etat("c"),nb_minevoisin(-1),rec(false)
+    carrau(): est_mine(false),etat("c"),nb_minevoisin(-1),rec(false),est_transparant(false)
     {
     }
     void set_etat(string e)
@@ -50,6 +51,14 @@ public:
     void set_rec()
     {
         rec=true;
+    }
+    bool get_est_trans()const
+    {
+        return est_transparant;
+    }
+    void set_est_trans(bool b)
+    {
+        est_transparant=b;
     }
 };
 #endif
