@@ -25,22 +25,23 @@
 
 1588037980 source:c:\users\moham\onedrive\bureau\moi\github\demineur-cplusplus\src\champdesmines.cpp
 
-1588459467 source:c:\users\moham\onedrive\bureau\moi\github\demineur-cplusplus\main.cpp
+1588805265 source:c:\users\moham\onedrive\bureau\moi\github\demineur-cplusplus\main.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
 	"carrau.h"
 	"champdesmines.h"
+	"mini_game.h"
 	<iomanip>
 	<chrono>
 	<fstream>
 	<vector>
 
-1588037980 c:\users\moham\onedrive\bureau\moi\github\demineur-cplusplus\include\carrau.h
+1588800778 c:\users\moham\onedrive\bureau\moi\github\demineur-cplusplus\include\carrau.h
 	<stdio.h>
 	<iostream>
 
-1588459679 c:\users\moham\onedrive\bureau\moi\github\demineur-cplusplus\include\champdesmines.h
+1588805138 c:\users\moham\onedrive\bureau\moi\github\demineur-cplusplus\include\champdesmines.h
 	<iostream>
 	"carrau.h"
 	<algorithm>
@@ -49,6 +50,7 @@
 	<fstream>
 	<vector>
 	<iomanip>
+	"mini_game.h"
 
 1588284561 source:c:\users\utilisateur\desktop\ensi\other\git\demineur-cplusplus\src\carrau.cpp
 
@@ -78,4 +80,12 @@
 	<fstream>
 	<vector>
 	<iomanip>
+
+1588802097 c:\users\moham\onedrive\bureau\moi\github\demineur-cplusplus\include\mini_game.h
+	<iostream>
+	<fstream>
+	<ctime>
+	<vector>
+	"champdesmines.h"
+	"carrau.h"
 

@@ -3,6 +3,7 @@
 #include <ctime>
 #include "carrau.h"
 #include "champdesmines.h"
+#include "mini_game.h"
 #include <iomanip>
 #include <chrono>
 #include <fstream>
@@ -70,8 +71,13 @@ int main()
     }
     if (decision=="non")
     {
-    cout<<"                     Vous voulez jouer demineur classique(c) ou autour du monde(s)"<<endl;
-    cin>>type_jeu;
+        do
+        {
+             cout<<"                     Vous voulez jouer demineur classique(c) ou autour du monde(s)"<<endl;
+             cin>>type_jeu;
+
+        }while(type_jeu!="c"&&type_jeu!="s");
+
     if(type_jeu=="s")
     {
         srand((int)time(0));
@@ -108,11 +114,34 @@ int main()
     }
 
 
-    else if(type_jeu=="c")
+    else
     {
 
     srand((int)time(0));
     champdesmines m;
+    if(m.get_mode()=="a")
+    {
+        if (m.get_niveau() == "facile")
+            {Quiz b(3);
+            b.affiche();
+             m.set_R(b.get_chance());
+            }
+        else if (m.get_niveau() == "moyenne")
+        {
+            Quiz b(5);
+            b.affiche();
+             m.set_R(b.get_chance());
+
+        }
+        else if (m.get_niveau() == "dificile")
+        {
+            Quiz b(7);
+            b.affiche();
+            m.set_R(b.get_chance());
+
+        }
+
+    }
     m.compte_voisins();
     m.Affichage();
 

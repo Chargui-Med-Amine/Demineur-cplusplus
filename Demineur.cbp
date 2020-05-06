@@ -36,6 +36,7 @@
 		</Compiler>
 		<Unit filename="include/carrau.h" />
 		<Unit filename="include/champdesmines.h" />
+		<Unit filename="include/mini_game.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/carrau.cpp" />
 		<Unit filename="src/champdesmines.cpp" />

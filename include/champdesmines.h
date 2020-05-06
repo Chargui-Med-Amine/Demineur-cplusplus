@@ -8,6 +8,7 @@
 #include <fstream>
 #include <vector>
 #include <iomanip>
+#include "mini_game.h"
 
 class champdesmines
 {
@@ -15,9 +16,9 @@ private:
     int d1;
     int d2;
     int nb_mines;
-    int R;
+    int R=0;
     carrau** champ;
-    string niveau;
+    string niveau,mode;
 public:
     champdesmines()
     {
@@ -25,12 +26,19 @@ public:
             cout << "\t\t\t\tchoisir le niveau (facile/moyenne/dificile)"<<endl;
 
             cin>>niveau;
+
         }while (niveau!="facile"&&niveau!="moyenne"&&niveau!="dificile");
-        if (niveau == "facile") {
+        do {
+
+            cout << "\t\t\t\tchoisir le mode de jeux (Pro(p)/Amateur(a))"<<endl;
+            cin>>mode;
+        }while (mode!="a"&& mode!="p");
+           if (niveau == "facile") {
 
             d1 = 8;
             d2 = 8;
             nb_mines = 10;
+
 
         }
 
@@ -39,11 +47,13 @@ public:
             d1 = 16;
             d2 = 16;
             nb_mines = 40;
+
         }
         else if (niveau == "dificile") {
             d1 = 30;
             d2 = 16;
             nb_mines = 99;
+
         }
 
         champ=new carrau*[d1];
@@ -61,6 +71,18 @@ public:
                 cp++;
             }
         }
+    }
+    void set_R(int i )
+    {
+        R=-i;
+    }
+    string get_niveau()
+    {
+        return(niveau);
+    }
+    string get_mode()
+    {
+        return(mode);
     }
      champdesmines(int x) //constructeur pour le tutoriel
     {
@@ -858,7 +880,7 @@ public:
                 else if((champ[i][j].get_etat()=="o") && (champ[i][j].get_est_mine()==true) )
                 {
                     cout<<"[M]"<<" ";
-                    R=1;
+
                 }
                 else{
                     cout<<"[ ]"<<" ";
@@ -871,6 +893,15 @@ public:
 
 
         cout<<"######## le nombres des mines restantes est :"<<nb_mines-nb_dra<<" ########"<<endl<<endl<<endl;
+        if(mode=="a")
+        {
+            if(-R>=0)
+            {
+                cout<<"######## le nombres chance :"<<-R<<" ########"<<endl<<endl<<endl;
+            }
+
+
+        }
         if (compte_ouvert()==nb_carrau()-nb_mines)
         {
 
@@ -907,6 +938,10 @@ public:
     {
         return nb_mines;
     }
+    void dec_nb_mines()
+    {
+        nb_mines--;
+    }
     void aff_lose()
     {
      for(int i=0;i<d1;i++)
@@ -925,21 +960,26 @@ public:
         string d;
         do
         {
-            cout<<"choisir un carrau: d1="<<endl;
+            do
+          {
+            cout<<"choisir un carrau:\nd1= ";
             cin>>h;
 
-        }
-        while( h<0 || h> d1);
-        do
-        {
-            cout<<"d2="<<endl;
+          }while( h<0 || h> d1);
+
+          do
+          {
+            cout<<"d2= ";
             cin>>t;
 
-        }
-        while(t<0 || t> d2);
+          }while(t<0 || t> d2);
+
+
+        }while(champ[h][t].get_est_trans()==true);
+
         do
         {
-             cout<<"quelle est la decision :ouvrir(o) drapau(d)"<<endl;
+             cout<<"quelle est la decision :ouvrir(o) drapau(d) ";
              cin>>d;
 
         }
@@ -952,6 +992,11 @@ public:
         else
         {
             champ[h][t].set_etat(d);
+            if (champ[h][t].get_est_mine()==true&&d=="o")
+            {
+                R++;
+                dec_nb_mines();
+            }
         }
 
 
