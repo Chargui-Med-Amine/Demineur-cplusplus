@@ -1,9 +1,9 @@
-#ifndef  CARREAU_H_INCLUDED
-#define  CARREAU_H_INCLUDED
+#ifndef CARRAU_H_INCLUDED
+#define CARRAU_H_INCLUDED
 #include <stdio.h>
 #include <iostream>
 using namespace std;
-class carreau
+class carrau
 {
 private:
     bool est_transparant;
@@ -12,7 +12,7 @@ private:
     int nb_minevoisin;//init a -1
     bool rec;
 public:
-    carreau(): est_mine(false),etat("c"),nb_minevoisin(-1),rec(false),est_transparant(false)
+    carrau(): est_mine(false),etat("c"),nb_minevoisin(-1),rec(false),est_transparant(false)
     {
     }
     void set_etat(string e)
