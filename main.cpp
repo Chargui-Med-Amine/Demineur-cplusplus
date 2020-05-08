@@ -43,7 +43,7 @@ int main()
             cout<<" on marque alors la case (5,5) par un drapeau "<<endl;
             m.open(5,5,"d");
         cout<<"le tutoriel est finie termine le jeu  "<<endl;
-        while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_careau()-m.get_nb_mines()))
+        while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_carreau()-m.get_nb_mines()))
         {
             m.open();
 
@@ -89,7 +89,7 @@ int main()
     m.Affichage();
 
     auto start = chrono::steady_clock::now();
-    while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_careau()-m.get_nb_mines()))
+    while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_carreau()-m.get_nb_mines()))
     {
         m.open();
 
@@ -149,7 +149,7 @@ int main()
     m.Affichage();
 
     auto start = chrono::steady_clock::now();
-    while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_careau()-m.get_nb_mines()))
+    while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_carreau()-m.get_nb_mines()))
     {
         m.open();
 
