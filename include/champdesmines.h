@@ -1,7 +1,7 @@
 #ifndef CHAMPDESMINES_H_INCLUDED
 #define CHAMPDESMINES_H_INCLUDED
 #include <iostream>
-#include "carrau.h"
+#include "carreau.h"
 #include <algorithm>
 #include <cstdlib>
 #include <ctime>
@@ -17,7 +17,7 @@ private:
     int d2;
     int nb_mines;
     int R=0;
-    carrau** champ;
+    carreau** champ;
     string niveau,mode;
 public:
     champdesmines()
@@ -56,10 +56,10 @@ public:
 
         }
 
-        champ=new carrau*[d1];
+        champ=new carreau*[d1];
         for(int i=0;i<d1;i++)
         {
-            champ[i]=new carrau[d2];
+            champ[i]=new carreau[d2];
         }
         int cp=0;
         while (cp!=nb_mines)
@@ -89,10 +89,10 @@ public:
         nb_mines =x;
         d1 = 8;
         d2 = 8;
-        champ=new carrau*[d1];
+        champ=new carreau*[d1];
         for(int i=0;i<d1;i++)
         {
-            champ[i]=new carrau[d2];
+            champ[i]=new carreau[d2];
         }
         champ[0][3].ajout_mine();
         champ[0][5].ajout_mine();
@@ -120,10 +120,10 @@ public:
         d1 = 18;
         d2 = 16;
         nb_mines = 25;
-        champ=new carrau*[d1];
+        champ=new carreau*[d1];
         for(int i=0;i<d1;i++)
         {
-            champ[i]=new carrau[d2];
+            champ[i]=new carreau[d2];
         }
 
        //1
@@ -285,10 +285,10 @@ public:
             d1 = 11;
             d2 = 9;
             nb_mines = 7;
-            champ=new carrau*[d1];
+            champ=new carreau*[d1];
         for(int i=0;i<d1;i++)
         {
-            champ[i]=new carrau[d2];
+            champ[i]=new carreau[d2];
         }
 
        //1
@@ -392,10 +392,10 @@ public:
             d1 = 11;
             d2 = 10;
             nb_mines = 10;
-            champ=new carrau*[d1];
+            champ=new carreau*[d1];
         for(int i=0;i<d1;i++)
         {
-            champ[i]=new carrau[d2];
+            champ[i]=new carreau[d2];
         }
 
        //1
@@ -473,10 +473,10 @@ public:
             d1 = 10;
             d2 = 12;
             nb_mines = 6;
-            champ=new carrau*[d1];
+            champ=new carreau*[d1];
         for(int i=0;i<d1;i++)
         {
-            champ[i]=new carrau[d2];
+            champ[i]=new carreau[d2];
         }
 
        //1
@@ -589,10 +589,10 @@ public:
             d1 = 12;
             d2 = 14;
             nb_mines = 12;
-            champ=new carrau*[d1];
+            champ=new carreau*[d1];
         for(int i=0;i<d1;i++)
         {
-            champ[i]=new carrau[d2];
+            champ[i]=new carreau[d2];
         }
 
        //1
@@ -717,10 +717,10 @@ public:
             d1 = 13;
             d2 = 14;
             nb_mines = 15;
-            champ=new carrau*[d1];
+            champ=new carreau*[d1];
         for(int i=0;i<d1;i++)
         {
-            champ[i]=new carrau[d2];
+            champ[i]=new carreau[d2];
         }
 
        //1
@@ -806,10 +806,10 @@ public:
         d1 = 35;
         d2 = 16;
         nb_mines = 40;
-        champ=new carrau*[d1];
+        champ=new carreau*[d1];
         for(int i=0;i<d1;i++)
         {
-            champ[i]=new carrau[d2];
+            champ[i]=new carreau[d2];
         }
 
        //1
@@ -1139,7 +1139,7 @@ public:
         }
     }
 
-    carrau** get_champ()
+    carreau** get_champ()
     {
         return champ ;
     }
@@ -1206,7 +1206,7 @@ public:
 
 
         }
-        if (compte_ouvert()==nb_carrau()-nb_mines)
+        if (compte_ouvert()==nb_carreau()-nb_mines)
         {
 
             cout<<endl<<"-------      /\\      -------   |\\    |   ------      "<<endl;
@@ -1234,7 +1234,7 @@ public:
         return k;
 
     }
-    int nb_carrau()
+    int nb_carreau()
     {
         return d1*d2;
     }
@@ -1266,7 +1266,7 @@ public:
         {
             do
           {
-            cout<<"choisir un carrau:\nd1= ";
+            cout<<"choisir un carreau:\nd1= ";
             cin>>h;
 
           }while( h<0 || h> d1);
@@ -1283,7 +1283,7 @@ public:
 
         do
         {
-             cout<<"quelle est la decision :ouvrir(o) drapau(d) ";
+             cout<<"quelle est la decision :ouvrir(o) draeau(d) ";
              cin>>d;
 
         }
@@ -1312,7 +1312,7 @@ public:
         string d;
         do
         {
-            cout<<"choisir un carrau: d1=    tapez  "<< x<< endl;
+            cout<<"choisir un carreau: d1=    tapez  "<< x<< endl;
             cin>>h;
 
         }
@@ -1326,7 +1326,7 @@ public:
         while(t!=y);
         do
         {
-            cout<<"quelle est la decision :ouvrir(o) drapau(d)     tapez "<< z <<endl;
+            cout<<"quelle est la decision :ouvrir(o) draeau(d)     tapez "<< z <<endl;
             cin>>d;
 
         }

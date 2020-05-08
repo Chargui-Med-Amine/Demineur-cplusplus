@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "carrau.h"
+#include "carreau.h"
 #include "champdesmines.h"
 #include "mini_game.h"
 #include <iomanip>
@@ -39,8 +39,11 @@ int main()
         cout<<"on remarque maitenant que la case (7,4) est la voisin d'une seul mines qu'elle peut etre seulement la case (7,3) donc la case (7,5)  voisine de (7,4) est sans mine "<<endl;
         cout<<"on ouvre alors la case (7,5) "<<endl;
         m.open(7,5,"o");
-        cout<<"le tutorielle est finie termine le jeu  "<<endl;
-        while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_carrau()-m.get_nb_mines()))
+        cout<<"on remarque maitenant que la case (6,4) est entouré par deux mine une mine deja marque dans la case (7,3) et une autre ne peut être que la case (5,5)  "<<endl;
+            cout<<" on marque alors la case (5,5) par un drapeau "<<endl;
+            m.open(5,5,"d");
+        cout<<"le tutoriel est finie termine le jeu  "<<endl;
+        while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_careau()-m.get_nb_mines()))
         {
             m.open();
 
@@ -86,7 +89,7 @@ int main()
     m.Affichage();
 
     auto start = chrono::steady_clock::now();
-    while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_carrau()-m.get_nb_mines()))
+    while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_careau()-m.get_nb_mines()))
     {
         m.open();
 
@@ -146,7 +149,7 @@ int main()
     m.Affichage();
 
     auto start = chrono::steady_clock::now();
-    while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_carrau()-m.get_nb_mines()))
+    while ((m.get_res()!=1)&&(m.compte_ouvert()!=m.nb_careau()-m.get_nb_mines()))
     {
         m.open();
 
