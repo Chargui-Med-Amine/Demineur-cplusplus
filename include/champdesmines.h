@@ -1211,7 +1211,7 @@ public:
         if (compte_ouvert()==nb_carreau()-nb_mines)
         {
 
-            cout<<"Bravoo, vouez avez gagne le jeu"<<endl<<endl;
+            cout<<"Bravoo, vous avez gagne le jeu"<<endl<<endl;
             cout<<R"(
         @@@@@@@@@
        @@@@@@@@@@@
