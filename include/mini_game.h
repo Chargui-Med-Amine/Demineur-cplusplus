@@ -152,13 +152,19 @@ public:
 
     void aff_Quiz()
     {
+
         system("cls");
         int i,j;
+        cout<<endl<<endl;
+        cout<<"\t\t\tCe Quiz est un moyen pour avoir plus de chance au jeu de demineur classique\n";
+        cout<<"\t\t\ta chaque iteration il est demande au joueur de repondre a une question si\n";
+        cout<<"\t\t\treponse est juste il gagne une chance qu'il l'utilise au jeu principale\n";
+        cout<<"\t\t\t\t\t ****une seule reponse est juste****\n";
         cout<<endl<<endl;
 
         for(i=0;i<taille;i++)
         {
-            cout<<"\t\t\t\t";
+            cout<<"\t\t\t\t\t\t\t";
             if(Q[i].get_ok())
             {
 
