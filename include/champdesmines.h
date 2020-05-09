@@ -111,7 +111,9 @@ public:
     {
         string continant;
         do {
-            cout << "choisir le continant : Afrique(af)/Amerique du sud(as)/Europe(e)/Australie(au)/Amerique du nord(an)/Asie(a)"<<endl;
+            cout << "Memes regles, meme principe mais des nouvelles aventures très intéressantes autour du monde."<<endl;
+            cout << "choisir le continant : "<<endl;
+            cout << "Afrique(af)/Amerique du sud(as)/Europe(e)/Australie(au)/Amerique du nord(an)/Asie(a)"<<endl;
             cout<<"ou jouer dans la Tunisie(t)"<<endl;
             cin>>continant;
         }while (continant!="af"&&continant!="as"&&continant!="e"&&continant!="au"&&continant!="an"&&continant!="a"&&continant!="t");
@@ -1209,11 +1211,29 @@ public:
         if (compte_ouvert()==nb_carreau()-nb_mines)
         {
 
-            cout<<endl<<"-------      /\\      -------   |\\    |   ------      "<<endl;
-            cout<<"|           /  \\     |         | \\   |   |           "<<endl;
-            cout<<"| |---|    /----\\    | |---|   |  \\  |   |-----      "<<endl;
-            cout<<"|     |   /      \\   |     |   |   \\ |   | "<<endl;
-            cout<<"-------  /        \\  -------   |    \\|   ------      \a \a"<<endl<<endl<<endl;
+            cout<<"Bravoo, vouez avez gagne le jeu"<<endl<<endl;
+            cout<<R"(
+        @@@@@@@@@
+       @@@@@@@@@@@
+     @@@@@@@@@@@@@@
+     @@@@@@@@@@@@@@@
+    @@@   @@@@@   @@@
+   @@@@   @@@@@   @@@@
+   @@@@   @@@@@   @@@@
+   @@@@@@@@@@@@@@@@@@@
+   @@@@@@@@@@@@@@@@@@@
+   @@@@@@@@@@@@@@@@@@@
+   @@@ @@@@@@@@@@@ @@@
+   @@@  @@@@@@@@@  @@@
+   @@@@           @@@@
+   @@@@@@       @@@@@@
+    @@@@@@@@@@@@@@@@@
+     @@@@@@@@@@@@@@@
+     @@@@@@@@@@@@@@@
+       @@@@@@@@@@@
+        @@@@@@@@@)";
+        cout<<endl<<endl;
+
         }
     }
     int get_res()const

@@ -53,11 +53,21 @@ int main()
         {
             m.aff_lose();
             m.Affichage();
-            cout<<endl<<endl<<"-----   -----  -----   -----   |    | "<<endl;
-            cout<<"|    |  |      |    |  |    \\  |    | "<<endl;
-            cout<<"|----   |----  |----   |    |  |    | "<<endl;
-            cout<<"|       |      |   \\   |    /  |    | "<<endl;
-            cout<<"|       -----  |    \\  -----   ------ \a"<<endl<<endl<<endl;
+            cout << "     Vous avez perdu le jeu"<<endl<<endl;
+            cout << "          a$$$$$$$$$$a" << endl;
+            cout << "        a$$$$$$$$$$$$$$a" << endl;
+            cout << "      a$$$$$$$$$$$$$$$$$$a" << endl;
+            cout << "     a$$$$$$$$$$$$$$$$$$$$a" << endl;
+            cout << "    a$$$$$   $$$$$$   $$$$$a" << endl;
+            cout << "   a$$$$$     $$$$     $$$$$a" << endl;
+            cout << "   a$$$$$$$$$$$$$$$$$$$$$$$$a" << endl;
+            cout << "   a$$$$$$$$$$$$$$$$$$$$$$$$a" << endl;
+            cout << "   a$$$$$$$$$$$$$$$$$$$$$$$$a" << endl;
+            cout << "    a$$$$$$          $$$$$$a" << endl;
+            cout << "     a$$$$  $$$$$$$$  $$$$a" << endl;
+            cout << "      a$$ $$$$$$$$$$$$ $$a" << endl;
+            cout << "        a$$$$$$$$$$$$$$a" << endl;
+            cout << "          a$$$$$$$$$$a" << endl<<endl<<endl;
 
 
         }
@@ -99,11 +109,22 @@ int main()
     {
         m.aff_lose();
         m.Affichage();
-        cout<<endl<<endl<<"-----   -----  -----   -----   |    | "<<endl;
-        cout<<"|    |  |      |    |  |    \\  |    | "<<endl;
-        cout<<"|----   |----  |----   |    |  |    | "<<endl;
-        cout<<"|       |      |   \\   |    /  |    | "<<endl;
-        cout<<"|       -----  |    \\  -----   ------ \a"<<endl<<endl<<endl;
+            cout << "     Vous avez perdu le jeu"<<endl<<endl;
+            cout << "          a$$$$$$$$$$a" << endl;
+            cout << "        a$$$$$$$$$$$$$$a" << endl;
+            cout << "      a$$$$$$$$$$$$$$$$$$a" << endl;
+            cout << "     a$$$$$$$$$$$$$$$$$$$$a" << endl;
+            cout << "    a$$$$$   $$$$$$   $$$$$a" << endl;
+            cout << "   a$$$$$     $$$$     $$$$$a" << endl;
+            cout << "   a$$$$$$$$$$$$$$$$$$$$$$$$a" << endl;
+            cout << "   a$$$$$$$$$$$$$$$$$$$$$$$$a" << endl;
+            cout << "   a$$$$$$$$$$$$$$$$$$$$$$$$a" << endl;
+            cout << "    a$$$$$$          $$$$$$a" << endl;
+            cout << "     a$$$$  $$$$$$$$  $$$$a" << endl;
+            cout << "      a$$ $$$$$$$$$$$$ $$a" << endl;
+            cout << "        a$$$$$$$$$$$$$$a" << endl;
+            cout << "          a$$$$$$$$$$a" << endl<<endl<<endl;
+
 
 
     }
@@ -159,11 +180,21 @@ int main()
     {
         m.aff_lose();
         m.Affichage();
-        cout<<endl<<endl<<"-----   -----  -----   -----   |    | "<<endl;
-        cout<<"|    |  |      |    |  |    \\  |    | "<<endl;
-        cout<<"|----   |----  |----   |    |  |    | "<<endl;
-        cout<<"|       |      |   \\   |    /  |    | "<<endl;
-        cout<<"|       -----  |    \\  -----   ------ \a"<<endl<<endl<<endl;
+            cout << "     Vous avez perdu le jeu"<<endl<<endl;
+            cout << "          a$$$$$$$$$$a" << endl;
+            cout << "        a$$$$$$$$$$$$$$a" << endl;
+            cout << "      a$$$$$$$$$$$$$$$$$$a" << endl;
+            cout << "     a$$$$$$$$$$$$$$$$$$$$a" << endl;
+            cout << "    a$$$$$   $$$$$$   $$$$$a" << endl;
+            cout << "   a$$$$$     $$$$     $$$$$a" << endl;
+            cout << "   a$$$$$$$$$$$$$$$$$$$$$$$$a" << endl;
+            cout << "   a$$$$$$$$$$$$$$$$$$$$$$$$a" << endl;
+            cout << "   a$$$$$$$$$$$$$$$$$$$$$$$$a" << endl;
+            cout << "    a$$$$$$          $$$$$$a" << endl;
+            cout << "     a$$$$  $$$$$$$$  $$$$a" << endl;
+            cout << "      a$$ $$$$$$$$$$$$ $$a" << endl;
+            cout << "        a$$$$$$$$$$$$$$a" << endl;
+            cout << "          a$$$$$$$$$$a" << endl<<endl<<endl;
 
 
     }
