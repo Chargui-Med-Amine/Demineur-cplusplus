@@ -23,11 +23,11 @@ public:
     champdesmines()
     {
         do {
-            cout << "\t\t\t\tchoisir le niveau (facile/moyenne/dificile)"<<endl;
+            cout << "\t\t\t\tchoisir le niveau (facile/moyen/difficile)"<<endl;
 
             cin>>niveau;
 
-        }while (niveau!="facile"&&niveau!="moyenne"&&niveau!="dificile");
+        }while (niveau!="facile"&&niveau!="moyen"&&niveau!="difficile");
         do {
 
             cout << "\t\t\t\tchoisir le mode de jeux (Pro(p)/Amateur(a))"<<endl;
@@ -42,16 +42,16 @@ public:
 
         }
 
-        else if (niveau == "moyenne") {
+        else if (niveau == "moyen") {
 
             d1 = 16;
             d2 = 16;
             nb_mines = 40;
 
         }
-        else if (niveau == "dificile") {
-            d1 = 30;
-            d2 = 16;
+        else if (niveau == "difficile") {
+            d1 = 20;
+            d2 = 20;
             nb_mines = 99;
 
         }

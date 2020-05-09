@@ -76,12 +76,12 @@ int main()
     {
         do
         {
-             cout<<"                     Vous voulez jouer demineur classique(c) ou autour du monde(s)"<<endl;
+             cout<<"                     Vous voulez jouer demineur Classique(c) ou Autour du Monde(am)"<<endl;
              cin>>type_jeu;
 
-        }while(type_jeu!="c"&&type_jeu!="s");
+        }while(type_jeu!="c"&&type_jeu!="am");
 
-    if(type_jeu=="s")
+    if(type_jeu=="am")
     {
         srand((int)time(0));
     champdesmines m(true);
@@ -129,14 +129,14 @@ int main()
             b.affiche();
              m.set_R(b.get_chance());
             }
-        else if (m.get_niveau() == "moyenne")
+        else if (m.get_niveau() == "moyen")
         {
             Quiz b(5);
             b.affiche();
              m.set_R(b.get_chance());
 
         }
-        else if (m.get_niveau() == "dificile")
+        else if (m.get_niveau() == "difficile")
         {
             Quiz b(7);
             b.affiche();
