@@ -113,8 +113,8 @@ public:
         do {
             cout << "Memes regles, meme principe mais des nouvelles aventures très intéressantes autour du monde."<<endl;
             cout << "choisir le continant : "<<endl;
-            cout << "Afrique(af)/Amerique du sud(as)/Europe(e)/Australie(au)/Amerique du nord(an)/Asie(a)"<<endl;
-            cout<<"ou jouer dans la Tunisie(t)"<<endl;
+            cout << "Afrique(af)\nAmerique du sud(as)\nEurope(e)\nAustralie(au)\nAmerique du nord(an)\nAsie(a)"<<endl;
+            cout<<"Ou jouer dans la Tunisie(t)"<<endl;
             cin>>continant;
         }while (continant!="af"&&continant!="as"&&continant!="e"&&continant!="au"&&continant!="an"&&continant!="a"&&continant!="t");
         if (continant == "af") {
@@ -807,7 +807,7 @@ public:
 
         d1 = 35;
         d2 = 16;
-        nb_mines = 40;
+        nb_mines = 50;
         champ=new carreau*[d1];
         for(int i=0;i<d1;i++)
         {
@@ -1288,15 +1288,29 @@ public:
           {
             cout<<"choisir un carreau:\nd1= ";
             cin>>h;
+            while(cin.fail())
+                {
+                    cout<<"entrez un entier:\nd1= "<<endl;
+                    cin.clear();
+                    cin.ignore(256,'\n');
+                    cin>>h;
+                }
 
-          }while( h<0 || h> d1);
+          }while( h<0 || h> d1-1);
 
           do
           {
             cout<<"d2= ";
             cin>>t;
+            while(cin.fail())
+                {
+                    cout<<"entrez un entier:\nd2= "<<endl;
+                    cin.clear();
+                    cin.ignore(256,'\n');
+                    cin>>t;
+                }
 
-          }while(t<0 || t> d2);
+          }while(t<0 || t> d2-1);
 
 
         }while(champ[h][t].get_est_trans()==true);
