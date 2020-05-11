@@ -17,9 +17,11 @@ int main()
     cout<<"\n\t\t\t\t\t**Bienvenue au Demineur**"<<endl;
     cout<<"\t\t\t\t\t*************************"<<endl;
     cout<<"\n\n\t\t\t\t Vous ne connaissez pas la jeu ? tapez "<<endl;
+    do{
     cout<<"\n\t\t\t\t\t  oui pour un tutoriel"<<endl;
     cout<<"\n\t\t\t\t\t  non pour continuer"<< endl;
     cin>>decision;
+    }while(decision!="oui" && decision!="non");
     if (decision=="oui")
     {
         srand((int)time(0));

@@ -1348,6 +1348,13 @@ public:
         {
             cout<<"choisir un carreau: d1=    tapez  "<< x<< endl;
             cin>>h;
+            while(cin.fail())
+                {
+                    cout<<"entrez un entier:\nd1= "<<endl;
+                    cin.clear();
+                    cin.ignore(256,'\n');
+                    cin>>h;
+                }
 
         }
         while( h!=x);
@@ -1355,6 +1362,13 @@ public:
         {
             cout<<"d2=   tapez   " <<y << endl;
             cin>>t;
+            while(cin.fail())
+                {
+                    cout<<"entrez un entier:\nd2= "<<endl;
+                    cin.clear();
+                    cin.ignore(256,'\n');
+                    cin>>t;
+                }
 
         }
         while(t!=y);
