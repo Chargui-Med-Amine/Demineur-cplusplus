@@ -6,11 +6,11 @@ using namespace std;
 class carreau
 {
 private:
-    bool est_transparant;
-    bool est_mine;//init a false
+    bool est_transparant;//Autour de Monde
+    bool est_mine;//Mine ou non(init a false)
     string etat;//(c)cacheé,(d)drapeau,(O)ouvert
     int nb_minevoisin;//init a -1
-    bool rec;
+    bool rec;//pour eviter le boucle infinie lors de l'appel de open_rec
 public:
     carreau(): est_mine(false),etat("c"),nb_minevoisin(-1),rec(false),est_transparant(false)
     {

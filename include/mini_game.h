@@ -31,10 +31,10 @@ public:
     }
 
 };
-class Question : public Reponse
+class Question
 {
     string qs;
-    bool ok=false;
+    bool ok=false;//l'etat de qs (ouvert ou pas encorse)
     Reponse T[3];
 
 public:
@@ -112,7 +112,7 @@ public:
 class Quiz :  public Question
 {   int nbr_qs=0;
     int taille=0;
-    int ch=0;
+    int ch=0;//chances
 
 public:
     Question*Q;
@@ -133,7 +133,7 @@ public:
 
         Q= new Question[nbr_qs];
         srand((int)time(0));
-        Tableau(t,nbr_qs);
+        Tableau(t,nbr_qs);//alea de qs
         for(int i=0;i<nbr_qs;i++)
             {
                 int a[3];
@@ -229,19 +229,10 @@ public:
         }
     }
 
-
-
-
     ~Quiz()
     {
         delete[] Q;
     }
-
-
-
-
-
-
 
 };
 

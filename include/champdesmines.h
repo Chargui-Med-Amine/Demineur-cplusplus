@@ -2,7 +2,7 @@
 #define CHAMPDESMINES_H_INCLUDED
 #include <iostream>
 #include "carreau.h"
-#include <algorithm>
+#include <algorithm>//Min Max
 #include <cstdlib>
 #include <ctime>
 #include <fstream>
@@ -13,11 +13,11 @@
 class champdesmines
 {
 private:
-    int d1;
-    int d2;
-    int nb_mines;
-    int R=0;
-    carreau** champ;
+    int d1;//nombre de lignes
+    int d2;//nombre de colonnes
+    int nb_mines;//pour chaque champ des mines
+    int R=0;//resultat
+    carreau** champ;//champ
     string niveau,mode;
 public:
     champdesmines()
@@ -37,7 +37,7 @@ public:
 
             d1 = 8;
             d2 = 8;
-            nb_mines = 10;
+            nb_mines = 10;//15%
 
 
         }
@@ -46,13 +46,13 @@ public:
 
             d1 = 16;
             d2 = 16;
-            nb_mines = 40;
+            nb_mines = 51;//20%
 
         }
         else if (niveau == "difficile") {
             d1 = 20;
             d2 = 20;
-            nb_mines = 99;
+            nb_mines = 100;//25%
 
         }
 
@@ -74,7 +74,7 @@ public:
     }
     void set_R(int i )
     {
-        R=-i;
+        R=-i;//nombre de chances
     }
     string get_niveau()
     {
@@ -1117,7 +1117,7 @@ public:
         {
             for(int j=0;j<d2;j++)
             {
-                if(champ[i][j].get_est_mine()==false)
+                if(champ[i][j].get_est_mine()==false)//i et j encadrés entre 0 et d1,d2
                 {
 
                     int deb1=std::max(0,i-1);
@@ -1141,18 +1141,18 @@ public:
         }
     }
 
-    carreau** get_champ()
+    carreau** get_champ()const
     {
         return champ ;
     }
 
     void Affichage()
     {
-        system("cls");
+        system("cls");//cleaer Screan
         int nb_dra=0;
         int i,j;
 
-        for(int l=0;l<d2;l++)
+        for(int l=0;l<d2;l++)//pour les indices
         {
             if(l<10)
                 cout<<"   "<<l;
@@ -1160,7 +1160,7 @@ public:
                 cout<<"  "<<l;
         }
         cout<<endl;
-        for(i=0;i<d1;i++)
+        for(i=0;i<d1;i++)//pour les indices
         {
             if(i<10)
                 cout<<i<<" ";
@@ -1266,7 +1266,7 @@ public:
     {
         nb_mines--;
     }
-    void aff_lose()
+    void aff_lose()//afficher tous les mines
     {
      for(int i=0;i<d1;i++)
         {
